@@ -129,7 +129,7 @@ export const Hero = () => {
               </motion.p>
 
               <motion.p
-                className="text-muted-foreground max-w-2xl pt-4 text-lg leading-relaxed"
+                className="text-muted-foreground pt-4 text-lg leading-relaxed"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
