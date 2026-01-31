@@ -160,16 +160,15 @@ export const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
-                className={`relative grid md:grid-cols-12 gap-4 items-center ${
-                  index % 2 === 1 ? "md:text-right" : ""
-                }`}
+                className="relative grid md:grid-cols-12 gap-4 items-start"
               >
-                {/* Project image/gradient */}
                 <div
-                  className={`md:col-span-7 ${
-                    index % 2 === 1 ? "md:order-2" : ""
+                  className={`flex flex-col gap-6 ${
+                    index % 2 === 0 ? "md:col-span-7" : "md:col-span-7 md:col-start-6 md:items-end md:text-right"
                   }`}
                 >
+                {/* Project image/gradient */}
+                <div className="w-full">
                   <div
                     className={`aspect-video rounded-lg border border-border overflow-hidden relative group ${
                       project.imageSrc
@@ -193,6 +192,7 @@ export const Projects = () => {
                         </div>
                       </>
                     )}
+{(project.github?.trim() || project.external?.trim()) && (
                     <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6">
                       {project.github?.trim() && (
                         <a
@@ -217,17 +217,12 @@ export const Projects = () => {
                         </a>
                       )}
                     </div>
+                    )}
                   </div>
                 </div>
 
                 {/* Project info */}
-                <div
-                  className={`md:col-span-6 ${
-                    index % 2 === 1
-                      ? "md:order-1 md:col-start-1"
-                      : "md:col-start-6"
-                  } md:row-start-1`}
-                >
+                <div className="w-full">
                   <p className="text-primary font-mono text-sm mb-2">
                     Featured Project
                   </p>
@@ -271,6 +266,7 @@ export const Projects = () => {
                       <li key={tech}>{tech}</li>
                     ))}
                   </ul>
+                </div>
                 </div>
               </motion.div>
             ))}
