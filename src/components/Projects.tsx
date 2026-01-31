@@ -5,7 +5,14 @@ const featuredProjects = [
   {
     title: "Foodify",
     subtitle: "Social Platform for Trending Restaurants (foodify.cc)",
-    tech: ["Backend", "Web App", "JavaScript (React)", "Python", "Web Scraping", "Database"],
+    tech: [
+      "Backend",
+      "Web App",
+      "JavaScript (React)",
+      "Python",
+      "Web Scraping",
+      "Database",
+    ],
     highlights: [
       "Built a social platform where users can swipe to discover trending restaurants, like and share lists, and explore popular recommendations.",
       "Made it easy for users to connect over shared taste while helping small businesses get discovered through social media-like experience.",
@@ -14,11 +21,12 @@ const featuredProjects = [
     github: undefined,
     external: "https://foodify.cc",
     image: "gradient-1",
-    imageSrc: "/foodify-preview.png",
+    imageSrc: "foodify-preview.png",
   },
   {
     title: "Brainlot",
-    subtitle: "Infinite Scroll Learning Platform (apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB)",
+    subtitle:
+      "Infinite Scroll Learning Platform (apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB)",
     tech: ["Backend", "Mobile App", "Typescript", "Database"],
     highlights: [
       "Co-founded and launched an iOS application with over 300 downloads, featuring an infinite vertical scrolling interface that automatically transforms user-uploaded documents into a continuous stream of interactive, gamified multiple choice quizzes.",
@@ -28,11 +36,12 @@ const featuredProjects = [
     github: undefined,
     external: "https://apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB",
     image: "gradient-2",
-    imageSrc: "/brainlot-preview.png",
+    imageSrc: "brainlot-preview.png",
   },
   {
     title: "DeepGenre",
-    subtitle: "Deep Learning Model for Movie Genre Classifier (github.com/MinseokKim0813/DeepGenre)",
+    subtitle:
+      "Deep Learning Model for Movie Genre Classifier (github.com/MinseokKim0813/DeepGenre)",
     tech: ["Machine Learning", "Computer Vision", "Pytorch", "Python"],
     highlights: [
       "Developed a multi-label CNN model to predict movie genres across 28 distinct classes based on the movie poster.",
@@ -44,20 +53,9 @@ const featuredProjects = [
     image: "gradient-3",
   },
   {
-    title: "TrendMap",
-    subtitle: "Real-Time Media Attention Analyzer (github.com/MinseokKim0813/TrendMap)",
-    tech: ["Data Analysis", "Web Scraping", "Python"],
-    highlights: [
-      "Built a tool that tracks media mentions of top American companies, analyzing trends across industries and states.",
-      "It identifies sectors and regions receiving the most attention, offering insights for informed investment decisions and market analysis.",
-    ],
-    github: "https://github.com/MinseokKim0813/TrendMap",
-    external: "https://github.com/MinseokKim0813/TrendMap",
-    image: "gradient-4",
-  },
-  {
     title: "MathTextor",
-    subtitle: "Humanizing Mathematical Typesetting (github.com/MinseokKim0813/MathTextor, Research report)",
+    subtitle:
+      "Humanizing Mathematical Typesetting (github.com/MinseokKim0813/MathTextor, Research report)",
     tech: ["Full Stack", "Web App", "Human-Computer Interaction", "Javascript"],
     highlights: [
       "Developed a context-aware web interface with LLMs that dynamically predicts and suggests mathematical symbols based on problem context, eliminating the need for LaTeX memorization.",
@@ -66,23 +64,12 @@ const featuredProjects = [
     ],
     github: "https://github.com/MinseokKim0813/MathTextor",
     external: "https://github.com/MinseokKim0813/MathTextor",
-    image: "gradient-5",
-  },
-  {
-    title: "FundMonitor",
-    subtitle: "Crowdfunding Campaign Data Scraper & Analyzer (github.com/MinseokKim0813/FundMonitor)",
-    tech: ["Data Analysis", "Web Scraping", "Python"],
-    highlights: [
-      "Developed a web scraper tool to extract and analyze real-time data from crowdfunding platforms, providing insights into funding progress across various categories and regions.",
-      "Identified global funding trends and underfunded sectors to facilitate optimized corporate social responsibility strategies, targeted investments, and product innovation opportunities.",
-    ],
-    github: "https://github.com/MinseokKim0813/FundMonitor",
-    external: "https://github.com/MinseokKim0813/FundMonitor",
-    image: "gradient-6",
+    image: "gradient-4",
   },
   {
     title: "GenderAr",
-    subtitle: "Arabic Name Gender Classification (github.com/MinseokKim0813/GenderAr, Research report)",
+    subtitle:
+      "Arabic Name Gender Classification (github.com/MinseokKim0813/GenderAr, Research report)",
     tech: ["Machine Learning", "NLP", "Transformers", "Python"],
     highlights: [
       "Developed a novel hybrid gender classifier for Arabic names by combining two custom-trained models: a morphological analyzer leveraging specific linguistic rules and a fine-tuned Transformer for deep learning inference.",
@@ -91,11 +78,12 @@ const featuredProjects = [
     ],
     github: "https://github.com/MinseokKim0813/GenderAr",
     external: "https://github.com/MinseokKim0813/GenderAr",
-    image: "gradient-7",
+    image: "gradient-5",
   },
   {
     title: "SenseFit",
-    subtitle: "Automatic Cursor Sensitivity Adjust Tool (github.com/MinseokKim0813/Sense_Fit)",
+    subtitle:
+      "Automatic Cursor Sensitivity Adjust Tool (github.com/MinseokKim0813/Sense_Fit)",
     tech: ["Software Engineering", "Python", "PyQt5", "pytest"],
     highlights: [
       "Developed a desktop application that tracks real-time cursor data and analyzes movement patterns to calculate and suggest optimal mouse sensitivity (DPI) for users.",
@@ -104,6 +92,32 @@ const featuredProjects = [
     ],
     github: "https://github.com/MinseokKim0813/Sense_Fit",
     external: "https://github.com/MinseokKim0813/Sense_Fit",
+    image: "gradient-6",
+  },
+  {
+    title: "TrendMap",
+    subtitle:
+      "Real-Time Media Attention Analyzer (github.com/MinseokKim0813/TrendMap)",
+    tech: ["Data Analysis", "Web Scraping", "Python"],
+    highlights: [
+      "Built a tool that tracks media mentions of top American companies, analyzing trends across industries and states.",
+      "It identifies sectors and regions receiving the most attention, offering insights for informed investment decisions and market analysis.",
+    ],
+    github: "https://github.com/MinseokKim0813/TrendMap",
+    external: "https://github.com/MinseokKim0813/TrendMap",
+    image: "gradient-7",
+  },
+  {
+    title: "FundMonitor",
+    subtitle:
+      "Crowdfunding Campaign Data Scraper & Analyzer (github.com/MinseokKim0813/FundMonitor)",
+    tech: ["Data Analysis", "Web Scraping", "Python"],
+    highlights: [
+      "Developed a web scraper tool to extract and analyze real-time data from crowdfunding platforms, providing insights into funding progress across various categories and regions.",
+      "Identified global funding trends and underfunded sectors to facilitate optimized corporate social responsibility strategies, targeted investments, and product innovation opportunities.",
+    ],
+    github: "https://github.com/MinseokKim0813/FundMonitor",
+    external: "https://github.com/MinseokKim0813/FundMonitor",
     image: "gradient-8",
   },
 ];
@@ -158,12 +172,14 @@ export const Projects = () => {
                 >
                   <div
                     className={`aspect-video rounded-lg border border-border overflow-hidden relative group ${
-                      project.imageSrc ? "bg-muted" : `bg-gradient-to-br ${gradientClasses[project.image]}`
+                      project.imageSrc
+                        ? "bg-muted"
+                        : `bg-gradient-to-br ${gradientClasses[project.image]}`
                     }`}
                   >
                     {project.imageSrc ? (
                       <img
-                        src={project.imageSrc}
+                        src={`${import.meta.env.BASE_URL}${project.imageSrc}`}
                         alt={`${project.title} preview`}
                         className="absolute inset-0 w-full h-full object-cover"
                       />
@@ -212,12 +228,16 @@ export const Projects = () => {
                       : "md:col-start-6"
                   } md:row-start-1`}
                 >
-                  <p className="text-primary font-mono text-sm mb-2">Featured Project</p>
+                  <p className="text-primary font-mono text-sm mb-2">
+                    Featured Project
+                  </p>
                   <div className="mb-4">
                     <h3 className="text-2xl font-bold hover:text-primary transition-colors">
-                      {(project.external?.trim() || project.github?.trim()) ? (
+                      {project.external?.trim() || project.github?.trim() ? (
                         <a
-                          href={project.external?.trim() || project.github?.trim()}
+                          href={
+                            project.external?.trim() || project.github?.trim()
+                          }
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -242,9 +262,11 @@ export const Projects = () => {
                       ))}
                     </ul>
                   </div>
-                  <ul className={`flex flex-wrap gap-3 font-mono text-sm text-muted-foreground ${
-                    index % 2 === 1 ? "md:justify-end" : ""
-                  }`}>
+                  <ul
+                    className={`flex flex-wrap gap-3 font-mono text-sm text-muted-foreground ${
+                      index % 2 === 1 ? "md:justify-end" : ""
+                    }`}
+                  >
                     {project.tech.map((tech) => (
                       <li key={tech}>{tech}</li>
                     ))}
@@ -253,7 +275,6 @@ export const Projects = () => {
               </motion.div>
             ))}
           </div>
-
         </motion.div>
       </div>
     </section>
