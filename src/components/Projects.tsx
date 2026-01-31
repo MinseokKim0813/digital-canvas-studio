@@ -4,27 +4,41 @@ import { ExternalLink, Github } from "lucide-react";
 const featuredProjects = [
   {
     title: "Foodify",
-    description:
-      "Social platform where users swipe to discover trending restaurants, like and share lists, and explore popular recommendations. Built the frontend with React, scraped data from Yelp and Google Maps, and managed the data using Firebase. Helps users connect over shared taste while helping small businesses get discovered through a social media–like experience.",
-    tech: ["React", "JavaScript", "Python", "Web Scraping", "Firebase"],
+    subtitle: "Social Platform for Trending Restaurants (foodify.cc)",
+    tech: ["Backend", "Web App", "JavaScript (React)", "Python", "Web Scraping", "Database"],
+    highlights: [
+      "Built a social platform where users can swipe to discover trending restaurants, like and share lists, and explore popular recommendations.",
+      "Made it easy for users to connect over shared taste while helping small businesses get discovered through social media-like experience.",
+      "Built the frontend with React, scraped data from Yelp and Google Maps, and managed the data using Firebase.",
+    ],
     github: undefined,
     external: "https://foodify.cc",
     image: "gradient-1",
+    imageSrc: "/foodify-preview.png",
   },
   {
     title: "Brainlot",
-    description:
-      "Co-founded and launched an iOS application with over 300 downloads, featuring an infinite vertical scrolling interface that transforms user-uploaded documents into a continuous stream of interactive, gamified multiple choice quizzes. Engineered the endless quiz generation pipeline and a flexible inference architecture supporting cloud-based and offline local LLMs. Selected for the university startup incubator.",
-    tech: ["TypeScript", "Mobile App", "Database", "LLMs"],
+    subtitle: "Infinite Scroll Learning Platform (apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB)",
+    tech: ["Backend", "Mobile App", "Typescript", "Database"],
+    highlights: [
+      "Co-founded and launched an iOS application with over 300 downloads, featuring an infinite vertical scrolling interface that automatically transforms user-uploaded documents into a continuous stream of interactive, gamified multiple choice quizzes.",
+      "Engineered the endless quizz generation pipeline in the background to support continuous scrolling, alongside a flexible inference architecture that allows users to toggle between cloud-based and offline local LLMs.",
+      "Selected for the university startup incubator to accelerate product growth with professional guidance, validating the platform's potential and uniqueness in the market.",
+    ],
     github: undefined,
     external: "https://apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB",
     image: "gradient-2",
+    imageSrc: "/brainlot-preview.png",
   },
   {
     title: "DeepGenre",
-    description:
-      "Multi-label CNN model to predict movie genres across 28 distinct classes based on movie posters. Achieved 59.98% precision (16.8× the random baseline). Used OCR and in-painting to remove poster text, ensuring classification relied solely on visual artwork and eliminating predictive bias from movie titles.",
-    tech: ["Python", "PyTorch", "Computer Vision", "CNN"],
+    subtitle: "Deep Learning Model for Movie Genre Classifier (github.com/MinseokKim0813/DeepGenre)",
+    tech: ["Machine Learning", "Computer Vision", "Pytorch", "Python"],
+    highlights: [
+      "Developed a multi-label CNN model to predict movie genres across 28 distinct classes based on the movie poster.",
+      "Achieved 59.98% precision, outperforming by 16.8 times against the random baseline precision of 3.5% and confirming robust transfer learning capabilities in complex visual recognition tasks.",
+      "Eliminated predictive bias prevalent in other models stemming from movie titles by utilizing OCR and in-painting to remove text, ensuring classification relied solely on visual artwork rather than linguistic clues.",
+    ],
     github: "https://github.com/MinseokKim0813/DeepGenre",
     external: "https://github.com/MinseokKim0813/DeepGenre",
     image: "gradient-3",
@@ -75,16 +89,26 @@ export const Projects = () => {
                   }`}
                 >
                   <div
-                    className={`aspect-video rounded-lg bg-gradient-to-br ${
-                      gradientClasses[project.image]
-                    } border border-border overflow-hidden relative group`}
+                    className={`aspect-video rounded-lg border border-border overflow-hidden relative group ${
+                      project.imageSrc ? "bg-muted" : `bg-gradient-to-br ${gradientClasses[project.image]}`
+                    }`}
                   >
-                    <div className="absolute inset-0 bg-grid opacity-50" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="font-mono text-4xl text-foreground/20">
-                        {"{...}"}
-                      </span>
-                    </div>
+                    {project.imageSrc ? (
+                      <img
+                        src={project.imageSrc}
+                        alt={`${project.title} preview`}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    ) : (
+                      <>
+                        <div className="absolute inset-0 bg-grid opacity-50" />
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <span className="font-mono text-4xl text-foreground/20">
+                            {"{...}"}
+                          </span>
+                        </div>
+                      </>
+                    )}
                     <div className="absolute inset-0 bg-background/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6">
                       {project.github?.trim() && (
                         <a
@@ -121,21 +145,34 @@ export const Projects = () => {
                   } md:row-start-1`}
                 >
                   <p className="text-primary font-mono text-sm mb-2">Featured Project</p>
-                  <h3 className="text-2xl font-bold mb-4 hover:text-primary transition-colors">
-                    {(project.external?.trim() || project.github?.trim()) ? (
-                      <a
-                        href={project.external?.trim() || project.github?.trim()}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {project.title}
-                      </a>
-                    ) : (
-                      <span>{project.title}</span>
+                  <div className="mb-4">
+                    <h3 className="text-2xl font-bold hover:text-primary transition-colors">
+                      {(project.external?.trim() || project.github?.trim()) ? (
+                        <a
+                          href={project.external?.trim() || project.github?.trim()}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {project.title}
+                        </a>
+                      ) : (
+                        <span>{project.title}</span>
+                      )}
+                    </h3>
+                    {project.subtitle && (
+                      <p className="text-sm text-muted-foreground mt-1 font-mono break-all">
+                        {project.subtitle}
+                      </p>
                     )}
-                  </h3>
+                  </div>
                   <div className="bg-card border border-border rounded-lg p-6 mb-4 shadow-lg">
-                    <p className="text-muted-foreground">{project.description}</p>
+                    <ul className="space-y-2 text-muted-foreground text-sm list-disc list-inside">
+                      {project.highlights.map((point, i) => (
+                        <li key={i} className="leading-relaxed">
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   <ul className={`flex flex-wrap gap-3 font-mono text-sm text-muted-foreground ${
                     index % 2 === 1 ? "md:justify-end" : ""
