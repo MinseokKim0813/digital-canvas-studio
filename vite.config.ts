@@ -4,7 +4,11 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
+// GitHub Pages serves from a subpath (e.g. /My-Website/). Set base to your repo name.
+const base = process.env.NODE_ENV === "production" ? "/My-Website/" : "/";
+
 export default defineConfig(({ mode }) => ({
+  base,
   server: {
     host: "::",
     port: 8080,
