@@ -24,13 +24,16 @@ export const Contact = () => {
 
           {/* Contact info */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-10">
-            <div className="flex items-center gap-2 text-muted-foreground">
+            <a
+              href="mailto:mk7545@nyu.edu"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
               <Mail className="w-5 h-5 text-primary" />
-              <span className="font-mono">hello@example.com</span>
-            </div>
+              <span className="font-mono">mk7545@nyu.edu</span>
+            </a>
             <div className="flex items-center gap-2 text-muted-foreground">
               <MapPin className="w-5 h-5 text-primary" />
-              <span className="font-mono">San Francisco, CA</span>
+              <span className="font-mono">Abu Dhabi, UAE</span>
             </div>
           </div>
 
@@ -42,9 +45,12 @@ export const Contact = () => {
             <Button
               size="lg"
               className="font-mono bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg glow-primary animate-glow-pulse"
+              asChild
             >
-              <Send className="w-5 h-5 mr-2" />
-              Say Hello
+              <a href="mailto:mk7545@nyu.edu">
+                <Send className="w-5 h-5 mr-2" />
+                Say Hello
+              </a>
             </Button>
           </motion.div>
 

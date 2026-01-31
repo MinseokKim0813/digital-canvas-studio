@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Database, Brain, Terminal } from "lucide-react";
+import { Code2, Database, Brain, Terminal, GraduationCap } from "lucide-react";
 
 const skills = [
   {
@@ -68,6 +68,23 @@ export const About = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   When I'm not coding, you'll find me contributing to open-source projects, 
                   reading research papers, or exploring new technologies.
+                </p>
+              </div>
+
+              {/* Education */}
+              <div className="bg-card border border-border rounded-lg p-4 card-hover">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="p-2 rounded-lg bg-primary/10">
+                    <GraduationCap className="w-5 h-5 text-primary" />
+                  </div>
+                  <h3 className="font-mono font-semibold">Education</h3>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  <span className="text-foreground font-medium">New York University Abu Dhabi (NYUAD)</span>
+                  <br />
+                  Bachelor of Science · Major in Computer Science · Minor in Applied Mathematics
+                  <br />
+                  Senior · Graduation Expected May 2026 · GPA: 3.71 / 4.0 · UAE
                 </p>
               </div>
 

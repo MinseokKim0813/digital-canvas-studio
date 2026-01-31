@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 
 const roles = [
-  "NYUAD Senior",
-  "Computer Science Major",
-  "Applied Math Minor",
-  "Machine Learning Enthusiast",
+  "Software Engineering",
+  "Data Science",
+  "Data Engineering",
+  "Full Stack",
+  "Backend",
+  "Frontend",
 ];
 
 export const Hero = () => {
@@ -16,22 +18,25 @@ export const Hero = () => {
 
   useEffect(() => {
     const role = roles[currentRole];
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (displayText.length < role.length) {
-          setDisplayText(role.slice(0, displayText.length + 1));
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          if (displayText.length < role.length) {
+            setDisplayText(role.slice(0, displayText.length + 1));
+          } else {
+            setTimeout(() => setIsDeleting(true), 2000);
+          }
         } else {
-          setTimeout(() => setIsDeleting(true), 2000);
+          if (displayText.length > 0) {
+            setDisplayText(displayText.slice(0, -1));
+          } else {
+            setIsDeleting(false);
+            setCurrentRole((prev) => (prev + 1) % roles.length);
+          }
         }
-      } else {
-        if (displayText.length > 0) {
-          setDisplayText(displayText.slice(0, -1));
-        } else {
-          setIsDeleting(false);
-          setCurrentRole((prev) => (prev + 1) % roles.length);
-        }
-      }
-    }, isDeleting ? 50 : 100);
+      },
+      isDeleting ? 50 : 100
+    );
 
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, currentRole]);
@@ -66,7 +71,9 @@ export const Hero = () => {
               <div className="w-3 h-3 rounded-full bg-syntax-string" />
               <div className="w-3 h-3 rounded-full bg-accent" />
             </div>
-            <span className="text-muted-foreground text-sm font-mono ml-4">~/portfolio</span>
+            <span className="text-muted-foreground text-sm font-mono ml-4">
+              ~/portfolio
+            </span>
           </motion.div>
 
           {/* Terminal body */}
@@ -78,9 +85,11 @@ export const Hero = () => {
           >
             <div className="font-mono space-y-4">
               <p className="text-muted-foreground">
-                <span className="syntax-comment">{"// Welcome to my portfolio"}</span>
+                <span className="syntax-comment">
+                  {"// Welcome to my portfolio"}
+                </span>
               </p>
-              
+
               <p>
                 <span className="syntax-keyword">const</span>{" "}
                 <span className="syntax-variable">developer</span>{" "}
@@ -89,14 +98,14 @@ export const Hero = () => {
               </p>
 
               <div className="pt-4">
-                <motion.h1 
+                <motion.h1
                   className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
                 >
                   <span className="text-foreground">Hello, I'm </span>
-                  <span className="text-gradient">Minseok Kim</span>
+                  <span className="text-gradient">Minseok</span>
                 </motion.h1>
               </div>
 
@@ -108,39 +117,55 @@ export const Hero = () => {
                 </p>
               </div>
 
-              <motion.p 
+              <motion.p
+                className="text-muted-foreground text-sm md:text-base pt-1 font-mono"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                <span className="syntax-comment">{"// "}</span>
+                Senior @ NYU Abu Dhabi · CS Major, Applied Math Minor ·
+                Graduating May 2026
+              </motion.p>
+
+              <motion.p
                 className="text-muted-foreground max-w-2xl pt-4 text-lg leading-relaxed"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
               >
-                Passionate about building elegant solutions to complex problems. 
-                I specialize in software development, research, and turning ideas into reality through code.
+                Passionate about building elegant solutions to complex problems.
+                I specialize in software development, research, and turning
+                ideas into reality through code.
               </motion.p>
 
               {/* Social links */}
-              <motion.div 
+              <motion.div
                 className="flex gap-4 pt-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
               >
                 <a
-                  href="#"
+                  href="https://github.com/MinseokKim0813"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300 glow-primary"
                   aria-label="GitHub"
                 >
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="#"
+                  href="https://linkedin.com/in/minseok0813"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="#contact"
+                  href="mailto:mk7545@nyu.edu"
                   className="p-3 rounded-lg bg-secondary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label="Email"
                 >
@@ -158,7 +183,10 @@ export const Hero = () => {
           animate={{ opacity: 1, y: [0, 10, 0] }}
           transition={{ delay: 1, y: { duration: 2, repeat: Infinity } }}
         >
-          <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
+          <a
+            href="#about"
+            className="text-muted-foreground hover:text-primary transition-colors"
+          >
             <ChevronDown className="w-8 h-8" />
           </a>
         </motion.div>
