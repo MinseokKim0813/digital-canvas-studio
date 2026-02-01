@@ -4,6 +4,21 @@ import { ExternalLink, Github } from "lucide-react";
 
 const featuredProjects = [
   {
+    title: "Brainlot",
+    subtitle:
+      "Infinite Scroll Learning Platform (apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB)",
+    tech: ["Backend", "Mobile App", "Typescript", "Database"],
+    highlights: [
+      "Co-founded and launched an iOS application with over 300 downloads, featuring an infinite vertical scrolling interface that automatically transforms user-uploaded documents into a continuous stream of interactive, gamified multiple choice quizzes.",
+      "Engineered the endless quizz generation pipeline in the background to support continuous scrolling, alongside a flexible inference architecture that allows users to toggle between cloud-based and offline local LLMs.",
+      "Selected for the university startup incubator to accelerate product growth with professional guidance, validating the platform's potential and uniqueness in the market.",
+    ],
+    github: undefined,
+    external: "https://apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB",
+    image: "gradient-1",
+    imageSrc: "brainlot-preview.png",
+  },
+  {
     title: "Foodify",
     subtitle: "Social Platform for Trending Restaurants (foodify.cc)",
     tech: [
@@ -21,23 +36,22 @@ const featuredProjects = [
     ],
     github: undefined,
     external: "https://foodify.cc",
-    image: "gradient-1",
+    image: "gradient-2",
     imageSrc: "foodify-preview.png",
   },
   {
-    title: "Brainlot",
+    title: "SenseFit",
     subtitle:
-      "Infinite Scroll Learning Platform (apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB)",
-    tech: ["Backend", "Mobile App", "Typescript", "Database"],
+      "Automatic Cursor Sensitivity Adjust Tool (github.com/MinseokKim0813/Sense_Fit)",
+    tech: ["Software Engineering", "Python", "PyQt5", "pytest"],
     highlights: [
-      "Co-founded and launched an iOS application with over 300 downloads, featuring an infinite vertical scrolling interface that automatically transforms user-uploaded documents into a continuous stream of interactive, gamified multiple choice quizzes.",
-      "Engineered the endless quizz generation pipeline in the background to support continuous scrolling, alongside a flexible inference architecture that allows users to toggle between cloud-based and offline local LLMs.",
-      "Selected for the university startup incubator to accelerate product growth with professional guidance, validating the platform's potential and uniqueness in the market.",
+      "Developed a desktop application that tracks real-time cursor data and analyzes movement patterns to calculate and suggest optimal mouse sensitivity (DPI) for users.",
+      "Engineered complex analysis algorithms to identify and quantify suboptimal behaviors, including complex cursor movement patterns to generate data-driven recommendations.",
+      "Ensured high reliability by achieving over 90% unit and system test coverage using pytest.",
     ],
-    github: undefined,
-    external: "https://apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB",
-    image: "gradient-2",
-    imageSrc: "brainlot-preview.png",
+    github: "https://github.com/MinseokKim0813/Sense_Fit",
+    external: "https://github.com/MinseokKim0813/Sense_Fit",
+    image: "gradient-3",
   },
   {
     title: "DeepGenre",
@@ -51,23 +65,8 @@ const featuredProjects = [
     ],
     github: "https://github.com/MinseokKim0813/DeepGenre",
     external: "https://github.com/MinseokKim0813/DeepGenre",
-    image: "gradient-3",
-    imageSrc: "deepgenre-preview.png",
-  },
-  {
-    title: "MathTextor",
-    subtitle:
-      "Humanizing Mathematical Typesetting (github.com/MinseokKim0813/MathTextor, Research report)",
-    tech: ["Full Stack", "Web App", "Human-Computer Interaction", "Javascript"],
-    highlights: [
-      "Developed a context-aware web interface with LLMs that dynamically predicts and suggests mathematical symbols based on problem context, eliminating the need for LaTeX memorization.",
-      "Conducted a user study with 24 participants, demonstrating that the system reduced typesetting time by 38.6% for novice users compared to standard LaTeX editors.",
-      "Optimized user experience by building an LLM inference pipeline with 72.9% F1 score, yielding a 4.57/7 usability score through the application of HCI design principles.",
-    ],
-    github: "https://github.com/MinseokKim0813/MathTextor",
-    external: "https://drive.google.com/file/d/1sMfhqQK3Pa2jVjlNYSmCbQ5T4j-dNu1X/view?usp=sharing",
     image: "gradient-4",
-    imageSrc: "mathtextor-preview.png",
+    imageSrc: "deepgenre-preview.png",
   },
   {
     title: "GenderAr",
@@ -82,20 +81,22 @@ const featuredProjects = [
     github: "https://github.com/MinseokKim0813/GenderAr",
     external: "https://github.com/MinseokKim0813/GenderAr",
     image: "gradient-5",
+    imageSrc: "genderar-preview.png",
   },
   {
-    title: "SenseFit",
+    title: "MathTextor",
     subtitle:
-      "Automatic Cursor Sensitivity Adjust Tool (github.com/MinseokKim0813/Sense_Fit)",
-    tech: ["Software Engineering", "Python", "PyQt5", "pytest"],
+      "Humanizing Mathematical Typesetting (github.com/MinseokKim0813/MathTextor, Research report)",
+    tech: ["Full Stack", "Web App", "Human-Computer Interaction", "Javascript"],
     highlights: [
-      "Developed a desktop application that tracks real-time cursor data and analyzes movement patterns to calculate and suggest optimal mouse sensitivity (DPI) for users.",
-      "Engineered complex analysis algorithms to identify and quantify suboptimal behaviors, including complex cursor movement patterns to generate data-driven recommendations.",
-      "Ensured high reliability by achieving over 90% unit and system test coverage using pytest.",
+      "Developed a context-aware web interface with LLMs that dynamically predicts and suggests mathematical symbols based on problem context, eliminating the need for LaTeX memorization.",
+      "Conducted a user study with 24 participants, demonstrating that the system reduced typesetting time by 38.6% for novice users compared to standard LaTeX editors.",
+      "Optimized user experience by building an LLM inference pipeline with 72.9% F1 score, yielding a 4.57/7 usability score through the application of HCI design principles.",
     ],
-    github: "https://github.com/MinseokKim0813/Sense_Fit",
-    external: "https://github.com/MinseokKim0813/Sense_Fit",
+    github: "https://github.com/MinseokKim0813/MathTextor",
+    external: "https://drive.google.com/file/d/1sMfhqQK3Pa2jVjlNYSmCbQ5T4j-dNu1X/view?usp=sharing",
     image: "gradient-6",
+    imageSrc: "mathtextor-preview.png",
   },
   {
     title: "TrendMap",
