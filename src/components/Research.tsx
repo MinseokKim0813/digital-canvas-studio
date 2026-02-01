@@ -13,21 +13,21 @@ export const publications = [
     title:
       "Gender Identification of Arabic Names: A Comparative Analysis of Morphological, Semantic and Deep Learning Approaches",
     venue: "Research Paper",
-    year: "—",
-    authors: ["Minseok Kim"],
-    affiliation: "New York University Abu Dhabi",
+    year: "2025",
+    authors: ["Minseok Kim [NYU Abu Dhabi]"],
+    advisors: "Nizar Habash [NYU Abu Dhabi]",
     abstract:
       "A novel hybrid gender classifier for Arabic names combining a morphological analyzer with linguistic rules and a fine-tuned Transformer, achieving 91.68% accuracy and outperforming the baseline by integrating linguistic rules with deep learning inference.",
     link: "https://drive.google.com/file/d/12Fqo6CqU5zPI6X3DGB6CRB2hLpGwGlxB/view?usp=sharing",
     type: "Research Paper",
   },
   {
-    title: "MathTextor: Humanizing Mathematical Typesetting for Undergraduate Students",
+    title:
+      "MathTextor: Humanizing Mathematical Typesetting for Undergraduate Students",
     venue: "Research Paper",
-    year: "—",
-    authors: ["Minseok Kim"],
-    advisors:
-      "Moumena Chaqfeh (moumena@nyu.edu), Steven Euijong Whang (swhang@kaist.ac.kr)",
+    year: "2025",
+    authors: ["Minseok Kim [NYU Abu Dhabi], Moumena Chaqfeh [NYU Abu Dhabi"],
+    advisors: "Moumena Chaqfeh [NYU Abu Dhabi], Steven Euijong Whang [KAIST]",
     abstract:
       "A context-aware web interface with LLMs that dynamically predicts and suggests mathematical symbols based on problem context. A user study with 24 participants showed a 38.6% reduction in typesetting time for novice users; the system achieved 72.9% F1 score and 4.57/7 usability.",
     link: "https://drive.google.com/file/d/1sMfhqQK3Pa2jVjlNYSmCbQ5T4j-dNu1X/view?usp=sharing",
@@ -38,19 +38,23 @@ export const publications = [
 const researchInterests = [
   {
     title: "Machine Learning",
-    description: "Deep learning, neural architecture search, and model compression",
+    description:
+      "Deep learning, neural architecture search, and model compression",
   },
   {
     title: "Natural Language Processing",
-    description: "Transformers, multilingual models, and semantic understanding",
+    description:
+      "Transformers, multilingual models, and semantic understanding",
   },
   {
     title: "Human Computer Interaction",
-    description: "User-centered design, usability evaluation, and interactive systems",
+    description:
+      "User-centered design, usability evaluation, and interactive systems",
   },
   {
     title: "LLM Security",
-    description: "Prompt injection, model robustness, and safe deployment of language models",
+    description:
+      "Prompt injection, model robustness, and safe deployment of language models",
   },
 ];
 
@@ -86,8 +90,12 @@ export const Research = () => {
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <BookOpen className="w-5 h-5 text-primary" />
                 </div>
-                <h3 className="font-mono font-semibold mb-2">{interest.title}</h3>
-                <p className="text-sm text-muted-foreground">{interest.description}</p>
+                <h3 className="font-mono font-semibold mb-2">
+                  {interest.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {interest.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -115,10 +123,12 @@ export const Research = () => {
                     Current
                   </span>
                   <h4 className="text-lg font-bold text-primary">
-                    {currentResearchActivity.lab}: {currentResearchActivity.topic}
+                    {currentResearchActivity.lab}:{" "}
+                    {currentResearchActivity.topic}
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
-                    {currentResearchActivity.role} at {currentResearchActivity.institution}
+                    {currentResearchActivity.role} at{" "}
+                    {currentResearchActivity.institution}
                   </p>
                 </div>
               </motion.article>
@@ -157,7 +167,9 @@ export const Research = () => {
                       </div>
                       <p className="text-sm text-muted-foreground mt-2">
                         {pub.authors.join(", ")}
-                        {"affiliation" in pub && pub.affiliation && `, ${pub.affiliation}`}
+                        {"affiliation" in pub &&
+                          pub.affiliation &&
+                          `, ${pub.affiliation}`}
                       </p>
                       {"advisors" in pub && pub.advisors && (
                         <p className="text-sm text-muted-foreground mt-1">
