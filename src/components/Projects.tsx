@@ -51,6 +51,7 @@ const featuredProjects = [
     github: "https://github.com/MinseokKim0813/DeepGenre",
     external: "https://github.com/MinseokKim0813/DeepGenre",
     image: "gradient-3",
+    imageSrc: "deepgenre-preview.png",
   },
   {
     title: "MathTextor",
@@ -205,7 +206,8 @@ export const Projects = () => {
                           <Github className="w-6 h-6" />
                         </a>
                       )}
-                      {project.external?.trim() && (
+                      {project.external?.trim() &&
+                        project.external !== project.github && (
                         <a
                           href={project.external}
                           target="_blank"
