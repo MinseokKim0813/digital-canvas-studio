@@ -52,6 +52,7 @@ const featuredProjects = [
     github: "https://github.com/MinseokKim0813/Sense_Fit",
     external: "https://github.com/MinseokKim0813/Sense_Fit",
     image: "gradient-3",
+    imageSrc: "sensefit-preview.png",
   },
   {
     title: "DeepGenre",
