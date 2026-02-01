@@ -114,13 +114,10 @@ export const Research = () => {
                     Current
                   </span>
                   <h4 className="text-lg font-bold text-primary">
-                    {currentResearchActivity.lab}
+                    {currentResearchActivity.lab}: {currentResearchActivity.topic}
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
                     {currentResearchActivity.role} at {currentResearchActivity.institution}
-                  </p>
-                  <p className="text-muted-foreground mt-2 text-sm">
-                    &ldquo;{currentResearchActivity.topic}&rdquo;
                   </p>
                 </div>
               </motion.article>
@@ -159,9 +156,6 @@ export const Research = () => {
                       </div>
                       <p className="text-sm text-muted-foreground mt-2">
                         {pub.authors.join(", ")}
-                      </p>
-                      <p className="text-sm font-mono text-primary mt-1">
-                        {pub.venue} • {pub.year}
                       </p>
                       {"advisors" in pub && pub.advisors && (
                         <p className="text-sm text-muted-foreground mt-2">
