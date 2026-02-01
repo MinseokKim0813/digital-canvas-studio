@@ -173,7 +173,7 @@ export const Research = () => {
                       </p>
                       {"advisors" in pub && pub.advisors && (
                         <p className="text-sm text-muted-foreground mt-1">
-                          {pub.advisors}
+                          Advised by: {pub.advisors}
                         </p>
                       )}
                       <p className="text-muted-foreground mt-3 text-sm line-clamp-2">
