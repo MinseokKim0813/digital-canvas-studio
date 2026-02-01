@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
@@ -64,8 +65,9 @@ const featuredProjects = [
       "Optimized user experience by building an LLM inference pipeline with 72.9% F1 score, yielding a 4.57/7 usability score through the application of HCI design principles.",
     ],
     github: "https://github.com/MinseokKim0813/MathTextor",
-    external: "https://github.com/MinseokKim0813/MathTextor",
+    external: "https://drive.google.com/file/d/1sMfhqQK3Pa2jVjlNYSmCbQ5T4j-dNu1X/view?usp=sharing",
     image: "gradient-4",
+    imageSrc: "mathtextor-preview.png",
   },
   {
     title: "GenderAr",
@@ -135,6 +137,8 @@ const gradientClasses: Record<string, string> = {
 };
 
 export const Projects = () => {
+  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
+
   return (
     <section id="projects" className="py-24 bg-card/30">
       <div className="container mx-auto px-6">
@@ -172,16 +176,22 @@ export const Projects = () => {
                 <div className="w-full">
                   <div
                     className={`aspect-video rounded-lg border border-border overflow-hidden relative group ${
-                      project.imageSrc
+                      project.imageSrc && !imageErrors[project.title]
                         ? "bg-muted"
                         : `bg-gradient-to-br ${gradientClasses[project.image]}`
                     }`}
                   >
-                    {project.imageSrc ? (
+                    {project.imageSrc && !imageErrors[project.title] ? (
                       <img
                         src={`${import.meta.env.BASE_URL}${project.imageSrc}`}
                         alt={`${project.title} preview`}
                         className="absolute inset-0 w-full h-full object-cover"
+                        onError={() =>
+                          setImageErrors((prev) => ({
+                            ...prev,
+                            [project.title]: true,
+                          }))
+                        }
                       />
                     ) : (
                       <>
