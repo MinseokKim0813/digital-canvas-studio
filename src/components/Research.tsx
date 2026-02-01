@@ -71,30 +71,6 @@ export const Research = () => {
             <div className="flex-1 h-px bg-border" />
           </div>
 
-          {/* Current research activity */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-card border border-border rounded-lg p-6 mb-16 card-hover flex flex-col sm:flex-row sm:items-center gap-4"
-          >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <FlaskConical className="w-6 h-6 text-primary" />
-            </div>
-            <div className="flex-1">
-              <p className="font-mono font-semibold text-primary">
-                {currentResearchActivity.role}
-              </p>
-              <p className="font-semibold mt-1">
-                {currentResearchActivity.lab} at {currentResearchActivity.institution}
-              </p>
-              <p className="text-muted-foreground mt-1 text-sm">
-                &ldquo;{currentResearchActivity.topic}&rdquo;
-              </p>
-            </div>
-          </motion.div>
-
           {/* Research interests */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
             {researchInterests.map((interest, index) => (
@@ -122,6 +98,32 @@ export const Research = () => {
               Research
             </h3>
             <div className="space-y-6">
+              {/* eBRAIN Lab — first under // Research */}
+              <motion.article
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0 }}
+                className="bg-card border border-border rounded-lg p-6 card-hover flex flex-col sm:flex-row sm:items-center gap-4"
+              >
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <FlaskConical className="w-6 h-6 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <span className="inline-block px-2 py-1 text-xs font-mono rounded bg-primary/10 text-primary mb-2">
+                    Current
+                  </span>
+                  <h4 className="text-lg font-bold text-primary">
+                    {currentResearchActivity.lab}
+                  </h4>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {currentResearchActivity.role} at {currentResearchActivity.institution}
+                  </p>
+                  <p className="text-muted-foreground mt-2 text-sm">
+                    &ldquo;{currentResearchActivity.topic}&rdquo;
+                  </p>
+                </div>
+              </motion.article>
               {publications.map((pub, index) => (
                 <motion.article
                   key={pub.title}

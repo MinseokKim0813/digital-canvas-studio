@@ -117,6 +117,7 @@ const featuredProjects = [
     github: "https://github.com/MinseokKim0813/FundMonitor",
     external: "https://github.com/MinseokKim0813/FundMonitor",
     image: "gradient-8",
+    imageSrc: "fundmonitor-preview.png",
   },
 ];
 
