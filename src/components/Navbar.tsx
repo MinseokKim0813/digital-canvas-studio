@@ -56,6 +56,8 @@ export const Navbar = () => {
             ))}
             <motion.a
               href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
@@ -96,6 +98,8 @@ export const Navbar = () => {
               ))}
               <a
                 href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-4 py-2 rounded border border-primary text-primary font-mono text-sm hover:bg-primary/10 transition-colors text-center"
               >
                 Resume
