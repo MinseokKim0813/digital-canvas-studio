@@ -34,12 +34,12 @@ const researchInterests = [
     description: "Transformers, multilingual models, and semantic understanding",
   },
   {
-    title: "Distributed Systems",
-    description: "Federated learning, edge computing, and system optimization",
+    title: "Human Computer Interaction",
+    description: "User-centered design, usability evaluation, and interactive systems",
   },
   {
-    title: "Software Engineering",
-    description: "Code generation, program synthesis, and developer tools",
+    title: "LLM Security",
+    description: "Prompt injection, model robustness, and safe deployment of language models",
   },
 ];
 

@@ -5,8 +5,7 @@ import { ExternalLink, Github } from "lucide-react";
 const featuredProjects = [
   {
     title: "Brainlot",
-    subtitle:
-      "Infinite Scroll Learning Platform (apps.apple.com/kr/app/brainlot/id6754814263?l=en-GB)",
+    subtitle: "Infinite Scroll Learning Platform",
     tech: ["Backend", "Mobile App", "Typescript", "Database"],
     highlights: [
       "Co-founded and launched an iOS application with over 300 downloads, featuring an infinite vertical scrolling interface that automatically transforms user-uploaded documents into a continuous stream of interactive, gamified multiple choice quizzes.",
@@ -20,7 +19,7 @@ const featuredProjects = [
   },
   {
     title: "Foodify",
-    subtitle: "Social Platform for Trending Restaurants (foodify.cc)",
+    subtitle: "Social Platform for Trending Restaurants",
     tech: [
       "Backend",
       "Web App",
@@ -41,8 +40,7 @@ const featuredProjects = [
   },
   {
     title: "SenseFit",
-    subtitle:
-      "Automatic Cursor Sensitivity Adjust Tool (github.com/MinseokKim0813/Sense_Fit)",
+    subtitle: "Automatic Cursor Sensitivity Adjust Tool",
     tech: ["Software Engineering", "Python", "PyQt5", "pytest"],
     highlights: [
       "Developed a desktop application that tracks real-time cursor data and analyzes movement patterns to calculate and suggest optimal mouse sensitivity (DPI) for users.",
@@ -56,8 +54,7 @@ const featuredProjects = [
   },
   {
     title: "DeepGenre",
-    subtitle:
-      "Deep Learning Model for Movie Genre Classifier (github.com/MinseokKim0813/DeepGenre)",
+    subtitle: "Deep Learning Model for Movie Genre Classifier",
     tech: ["Machine Learning", "Computer Vision", "Pytorch", "Python"],
     highlights: [
       "Developed a multi-label CNN model to predict movie genres across 28 distinct classes based on the movie poster.",
@@ -71,8 +68,7 @@ const featuredProjects = [
   },
   {
     title: "GenderAr",
-    subtitle:
-      "Arabic Name Gender Classification (github.com/MinseokKim0813/GenderAr, Research report)",
+    subtitle: "Arabic Name Gender Classification (Research report)",
     tech: ["Machine Learning", "NLP", "Transformers", "Python"],
     highlights: [
       "Developed a novel hybrid gender classifier for Arabic names by combining two custom-trained models: a morphological analyzer leveraging specific linguistic rules and a fine-tuned Transformer for deep learning inference.",
@@ -80,14 +76,13 @@ const featuredProjects = [
       "Implemented and evaluated three distinct classification methodologies: Morphological Analyzer Model (Logistic Regression), Semantic Analyzer Model (Word Embeddings), Deep Learning Model (Fine-tuning Transformer), and a Hybrid Cascade system.",
     ],
     github: "https://github.com/MinseokKim0813/GenderAr",
-    external: "https://github.com/MinseokKim0813/GenderAr",
+    external: "https://drive.google.com/file/d/12Fqo6CqU5zPI6X3DGB6CRB2hLpGwGlxB/view",
     image: "gradient-5",
     imageSrc: "genderar-preview.png",
   },
   {
     title: "MathTextor",
-    subtitle:
-      "Humanizing Mathematical Typesetting (github.com/MinseokKim0813/MathTextor, Research report)",
+    subtitle: "Humanizing Mathematical Typesetting (Research report)",
     tech: ["Full Stack", "Web App", "Human-Computer Interaction", "Javascript"],
     highlights: [
       "Developed a context-aware web interface with LLMs that dynamically predicts and suggests mathematical symbols based on problem context, eliminating the need for LaTeX memorization.",
@@ -101,8 +96,7 @@ const featuredProjects = [
   },
   {
     title: "TrendMap",
-    subtitle:
-      "Real-Time Media Attention Analyzer (github.com/MinseokKim0813/TrendMap)",
+    subtitle: "Real-Time Media Attention Analyzer",
     tech: ["Data Analysis", "Web Scraping", "Python"],
     highlights: [
       "Built a tool that tracks media mentions of top American companies, analyzing trends across industries and states.",
@@ -114,8 +108,7 @@ const featuredProjects = [
   },
   {
     title: "FundMonitor",
-    subtitle:
-      "Crowdfunding Campaign Data Scraper & Analyzer (github.com/MinseokKim0813/FundMonitor)",
+    subtitle: "Crowdfunding Campaign Data Scraper & Analyzer",
     tech: ["Data Analysis", "Web Scraping", "Python"],
     highlights: [
       "Developed a web scraper tool to extract and analyze real-time data from crowdfunding platforms, providing insights into funding progress across various categories and regions.",
