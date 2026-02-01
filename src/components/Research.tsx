@@ -158,7 +158,7 @@ export const Research = () => {
                               href={pub.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="hover:underline focus:underline focus:outline-none"
+                              className="focus:outline-none"
                             >
                               {pub.title}
                             </a>
